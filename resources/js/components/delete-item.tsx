@@ -4,7 +4,11 @@ import { Link } from '@inertiajs/react';
 import { TrashIcon } from 'lucide-react';
 import { useState } from 'react';
 
-export function DeleteItem({ item, text, path }: { item: object; text: string; path: string }) {
+interface Item {
+    id: number;
+}
+
+export function DeleteItem({ item, text, path }: { item: Item; text: string; path: string }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (

@@ -40,14 +40,14 @@ class PatientController extends Controller
     public function show(Patient $patient): Response
     {
         return inertia('patients/show', [
-            'patient' => new PatientResource($patient)
+            'patient' => PatientResource::make($patient)
         ]);
     }
 
     public function edit(Patient $patient): Response
     {
         return inertia('patients/edit', [
-            'patient' => new PatientResource($patient)
+            'patient' => PatientResource::make($patient)
         ]);
     }
 
